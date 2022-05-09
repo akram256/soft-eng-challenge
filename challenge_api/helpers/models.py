@@ -23,3 +23,12 @@ class BaseAbstractModel(models.Model):
     class Meta:
         abstract = True
         ordering = ['-created_at']
+        
+
+class Configurations(models.Model):
+    max_ships_to_mothership_capacity = models.IntegerField()
+    max_crewmembers_to_ship_capacity = models.IntegerField()
+    no_ships_added = models.IntegerField()
+    no_crewmembers_added = models.IntegerField()
+    
+    
